@@ -2,7 +2,7 @@
 	"name": "quick-file-create",
 	"displayName": "Quick File Create",
 	"description": "Automatically create a file inside created folder",
-	"publisher": "JeremyTenjo",
+	"publisher": "tenjojeremy",
 	"version": "0.2.0",
 	"engines": {
 		"vscode": "^1.55.0"
