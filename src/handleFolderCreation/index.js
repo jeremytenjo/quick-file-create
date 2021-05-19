@@ -22,8 +22,6 @@ module.exports = function handleFolderCreation() {
     const isFolder = await isUriAFolder(uri)
     if (!isFolder) return
 
-    console.log('HERE!')
-
     const split = splitPath(uri)
     const folderName = split.pop()
     let newFilePath = ''
@@ -35,6 +33,12 @@ module.exports = function handleFolderCreation() {
         uri.path,
         fileName + userConfig.fileExtension
       )
+    }
+    const foldersToIgnore = userConfig.ignoreFolders.split(', ')
+
+    if (foldersToIgnore[0] !== '') {
+      const ignoreFolder = foldersToIgnore.some((f) => newFilePath.includes(f))
+      if (ignoreFolder) return
     }
 
     await createFile(newFilePath, '')

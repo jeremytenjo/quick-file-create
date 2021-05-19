@@ -37,8 +37,13 @@
 				},
 				"quickFileCreate.dirToWatch": {
 					"type": "string",
-					"default": "src",
-					"description": "Directory to watch for new folders"
+					"default": "src/**",
+					"description": "Directory to watch for new folders (blob)"
+				},
+				"quickFileCreate.ignoreFolders": {
+					"type": "string",
+					"default": "",
+					"description": "Folders to ignore adding files to (separated by commas) eg build, dist"
 				},
 				"quickFileCreate.fileNameCase": {
 					"type": "string",
