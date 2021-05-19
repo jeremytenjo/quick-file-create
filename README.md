@@ -1,42 +1,29 @@
-# Word Intellisense
+# Quick File Create
 
 ## Features
 
-Auto complete
+Automatically create a file named after a newly created folder
 
-Open file and Open Storybook on hover
+## Examaple
 
-Go to definition if file exists
+![image info](https://firebasestorage.googleapis.com/v0/b/useweb-lib.appspot.com/o/devtools%2Fplugins%2Fvscode%2Fquick-file-create%2Fdemo.gif?alt=media&token=1981496f-7636-489b-ac30-d4fbaffdc0b0)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- `quickFileCreate.fileExtension`: defaults to `.js`
+- `quickFileCreate.outputIndexjs`: file created will be named `index.js`
+- `quickFileCreate.fileNameCase`: options:
 
-For example:
-
-This extension contributes the following settings:
-
-- `wordIntellisense.baseDir`: base dir of words
-- `wordIntellisense.storybook.port`: Storybook port
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
+```json
+"camelCase",
+"capitalCase",
+"constantCase",
+"dotCase",
+"headerCase",
+"noCase",
+"paramCase",
+"pascalCase",
+"pathCase",
+"sentenceCase",
+"snakeCase"
+```
