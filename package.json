@@ -1,7 +1,7 @@
 {
 	"name": "quick-file-create",
 	"displayName": "Quick File Create",
-	"description": "Automatically create a file inside created folder",
+	"description": "Automatically create file when folder is created",
 	"publisher": "tenjojeremy",
 	"version": "0.3.0",
 	"engines": {
