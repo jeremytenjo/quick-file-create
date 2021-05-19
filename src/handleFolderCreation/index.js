@@ -8,20 +8,24 @@ const createFile = require('../../utils/folderFiles/createFile')
 const openFile = require('../../utils/folderFiles/openFile')
 
 module.exports = function handleFolderCreation() {
+  const userConfig = vscode.workspace.getConfiguration('quickFileCreate')
+  if (userConfig.disable) return
+
   let folders = vscode.workspace.workspaceFolders
   if (!folders) return
 
   let watcher = vscode.workspace.createFileSystemWatcher(
-    new vscode.RelativePattern(folders[0], '*/**')
+    new vscode.RelativePattern(folders[0], userConfig.dirToWatch)
   )
 
   watcher.onDidCreate(async (uri) => {
     const isFolder = await isUriAFolder(uri)
     if (!isFolder) return
 
+    console.log('HERE!')
+
     const split = splitPath(uri)
     const folderName = split.pop()
-    const userConfig = vscode.workspace.getConfiguration('quickFileCreate')
     let newFilePath = ''
 
     if (userConfig.outputIndexjs) newFilePath = path.join(uri.path, 'index.js')

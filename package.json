@@ -30,6 +30,16 @@
 		"configuration": {
 			"title": "QuickFileCreate",
 			"properties": {
+				"quickFileCreate.disable": {
+					"type": "boolean",
+					"default": false,
+					"description": "Disable extension"
+				},
+				"quickFileCreate.dirToWatch": {
+					"type": "string",
+					"default": "src",
+					"description": "Directory to watch for new folders"
+				},
 				"quickFileCreate.fileNameCase": {
 					"type": "string",
 					"default": "camelCase",
