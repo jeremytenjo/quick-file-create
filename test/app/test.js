@@ -1,5 +1,0 @@
-NavBar
-
-Button
-
-capitalize

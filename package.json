@@ -11,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onFileSystem:sftp"
+		"onStartupFinished"
 	],
 	"main": "./src/index.js",
 	"scripts": {
@@ -32,9 +32,32 @@
 			"properties": {
 				"quickFileCreate.fileNameCase": {
 					"type": "string",
-					"default": "camel",
+					"default": "camelCase",
+					"enum": [
+						"camelCase",
+						"capitalCase",
+						"constantCase",
+						"dotCase",
+						"headerCase",
+						"noCase",
+						"paramCase",
+						"pascalCase",
+						"pathCase",
+						"sentenceCase",
+						"snakeCase"
+					],
 					"description": "Created file name case"
 				},
+				"quickFileCreate.fileExtension": {
+					"type": "string",
+					"default": ".js",
+					"description": "Created file name case"
+				},
+				"quickFileCreate.outputIndexjs": {
+					"type": "boolean",
+					"default": false,
+					"description": "Created file name case"
+				}
 			}
 		}
 	},
@@ -50,6 +73,7 @@
 		"vscode-test": "^1.5.0"
 	},
 	"dependencies": {
+		"change-case": "^4.1.2",
 		"os": "^0.1.1"
 	}
 }
