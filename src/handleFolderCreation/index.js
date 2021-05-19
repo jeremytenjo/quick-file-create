@@ -36,7 +36,6 @@ module.exports = function handleFolderCreation() {
     }
 
     if (userConfig.ignoreFolders.length) {
-      console.log(userConfig.ignoreFolders)
       const ignoreFolder = userConfig.ignoreFolders.some((f) =>
         newFilePath.includes(f)
       )
