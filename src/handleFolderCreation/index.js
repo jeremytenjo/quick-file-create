@@ -18,14 +18,14 @@ module.exports = function handleFolderCreation() {
   watcher.onDidCreate(async (uri) => {
     const isFolder = await isUriAFolder(uri)
     if (!isFolder) return
+
     const split = splitPath(uri)
     const folderName = split.pop()
     const userConfig = vscode.workspace.getConfiguration('quickFileCreate')
     let newFilePath = ''
 
-    if (userConfig.outputIndexjs) {
-      newFilePath = path.join(uri.path, 'index.js')
-    } else {
+    if (userConfig.outputIndexjs) newFilePath = path.join(uri.path, 'index.js')
+    else {
       let fileName = changeCase[userConfig.fileNameCase](folderName)
       newFilePath = path.posix.join(
         uri.path,
