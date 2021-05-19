@@ -34,10 +34,13 @@ module.exports = function handleFolderCreation() {
         fileName + userConfig.fileExtension
       )
     }
-    const foldersToIgnore = userConfig.ignoreFolders.split(', ')
 
-    if (foldersToIgnore[0] !== '') {
-      const ignoreFolder = foldersToIgnore.some((f) => newFilePath.includes(f))
+    if (userConfig.ignoreFolders.length) {
+      console.log(userConfig.ignoreFolders)
+      const ignoreFolder = userConfig.ignoreFolders.some((f) =>
+        newFilePath.includes(f)
+      )
+
       if (ignoreFolder) return
     }
 
