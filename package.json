@@ -1,7 +1,7 @@
 {
 	"name": "quick-file-create",
-	"displayName": "Word Intellisense",
-	"description": "Add intellisnse to Words",
+	"displayName": "Quick File Create",
+	"description": "Automatically create a file inside created folder",
 	"publisher": "JeremyTenjo",
 	"version": "0.0.1",
 	"engines": {
@@ -30,16 +30,11 @@
 		"configuration": {
 			"title": "QuickFileCreate",
 			"properties": {
-				"quickFileCreate.baseDir": {
+				"quickFileCreate.fileNameCase": {
 					"type": "string",
-					"default": "lib",
-					"description": "Base directory of auto imported files"
+					"default": "camel",
+					"description": "Created file name case"
 				},
-				"quickFileCreate.storybook.port": {
-					"type": "number",
-					"default": 6007,
-					"description": "Storybook port number"
-				}
 			}
 		}
 	},
