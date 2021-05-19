@@ -66,12 +66,12 @@
 				"quickFileCreate.fileExtension": {
 					"type": "string",
 					"default": ".js",
-					"description": "Created file name case"
+					"description": "Created file extension"
 				},
 				"quickFileCreate.outputIndexjs": {
 					"type": "boolean",
 					"default": false,
-					"description": "Created file name case"
+					"description": "Create index.js"
 				}
 			}
 		}
