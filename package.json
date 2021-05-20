@@ -42,7 +42,9 @@
 				},
 				"quickFileCreate.ignoreFolders": {
 					"type": "array",
-					"default": [],
+					"default": [
+						"node_modules"
+					],
 					"description": "Folders to ignore adding files to (separated by commas) eg build, dist"
 				},
 				"quickFileCreate.fileNameCase": {
