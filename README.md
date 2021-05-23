@@ -1,6 +1,5 @@
 # Quick File Create
 
-## Features
 
 Automatically create a file named after a newly created folder
 
