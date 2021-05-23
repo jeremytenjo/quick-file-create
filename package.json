@@ -3,7 +3,7 @@
 	"displayName": "Quick File Create",
 	"description": "Automatically create file when folder is created",
 	"publisher": "tenjojeremy",
-	"version": "0.18.0",
+	"version": "0.19.0",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
